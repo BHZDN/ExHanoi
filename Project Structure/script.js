@@ -77,8 +77,8 @@ function exHanoi_2(A, B, C, D, n) {
     // exHanoi_2(B , A , C , D , n-1);
     hanoi(A , C , B , n-1);
     moves.push([A , C]);
-    exHanoi2(B , A , D , C , n-1);
-    
+    exHanoi_2(B , A , D , C , n-1);
+
         
 }
 
