@@ -64,17 +64,6 @@ function exHanoi_1(start, aux, end, n) {
 function exHanoi_2(A, B, C, D, n) {
     if(n <= 0)
         return;
-    // if(n == 1){
-    //     moves.push([A , C]);
-    //     return;
-    // }
-    // exHanoi_2(A , C , D , B , n-1);
-    
-    // if(n % 2 == 0)
-    //     moves.push([A , D]);
-    // else    
-    //     moves.push([A , C]);
-    // exHanoi_2(B , A , C , D , n-1);
     hanoi(A , C , B , n-1);
     moves.push([A , C]);
     exHanoi_2(B , A , D , C , n-1);
