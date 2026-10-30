@@ -46,8 +46,15 @@ function hanoi(from, via, to, n) {
 }
 
 function exHanoi_1(start, aux, end, n) {
-    alert("your function is not complete")
-    return
+    if(n <= 0){
+        return
+    }
+    
+    exHanoi_1(A , B , C , n-1);
+
+    hanoi(C , B , C , 6*n-6);
+    hanoi(C , A , B , 6*n-5);
+    hanoi(B , A , C , 6*n-3);
 }  
 
 function exHanoi_2(A, B, C, D, n) {
